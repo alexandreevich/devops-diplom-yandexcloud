@@ -50,6 +50,30 @@
 1. Terraform сконфигурирован и создание инфраструктуры посредством Terraform возможно без дополнительных ручных действий, стейт основной конфигурации сохраняется в бакете или Terraform Cloud
 2. Полученная конфигурация инфраструктуры является предварительной, поэтому в ходе дальнейшего выполнения задания возможны изменения.
 
+
+### Ответ 
+
+1. Сервисный аккаунт задается в variavles.tf. Права storage.admin, для работы с бакетом. 
+2. Провайдер и бакет описаны в [providers.tf](https://github.com/alexandreevich/devops-diplom-yandexcloud/blob/main/terraform/providers.tf) После того, как инфраструктура разворачивается, мы разкоменнтируем блок backend "S3" и инициализируем инфраструктуру коммандой 
+```
+terraform init
+```
+После этого, terraform.tfstate хранится в бакете и можно выполнит `terraform destroy` и `terraform apply` без дополнительных ручных действий.
+Продемонстрирую это скриншотами, что бы не тратить бюджет. После этого переместил файл terraform.tfstate к себе и сделал terraform init -upgrade.
+
+3. Все переменные описаны в файле [variables.tf](https://github.com/alexandreevich/devops-diplom-yandexcloud/blob/main/terraform/variables.tf)
+4. Нам потребуются 3 ВМ для разворачивания кластера k8s + gitlab. 
+Гитлаб берем в соответствии с рекомендацией Яндекса, [gitlab.tf](https://github.com/alexandreevich/devops-diplom-yandexcloud/blob/main/terraform/gitlab.tf) 
+5. В логику control-plane и worker-nodes закладываем сразу счетчик для возможности масштабироваться. Подсети задаем используя по умолчанию 2 значения и распределение между ними(для георезервирования) через "% length". [control_plane.tf](https://github.com/alexandreevich/devops-diplom-yandexcloud/blob/main/terraform/control_plane.tf) [worker.tf](https://github.com/alexandreevich/devops-diplom-yandexcloud/blob/main/terraform/worker.tf)
+6. Для удобства задаем циклы для формирования инвентарника - [ansible.tf](https://github.com/alexandreevich/devops-diplom-yandexcloud/blob/main/terraform/ansible.tf)
+
+
+
+
+
+
+
+
 ---
 ### Создание Kubernetes кластера
 
