@@ -67,7 +67,8 @@ terraform init
 5. В логику control-plane и worker-nodes закладываем сразу счетчик для возможности масштабироваться. Подсети задаем используя по умолчанию 2 значения и распределение между ними(для георезервирования) через "% length". [control_plane.tf](https://github.com/alexandreevich/devops-diplom-yandexcloud/blob/main/terraform/control_plane.tf) [worker.tf](https://github.com/alexandreevich/devops-diplom-yandexcloud/blob/main/terraform/worker.tf)
 6. Для удобства задаем циклы для формирования инвентарника - [ansible.tf](https://github.com/alexandreevich/devops-diplom-yandexcloud/blob/main/terraform/ansible.tf)
 
-
+Развернутые ВМ: 
+![Снимок экрана 2024-11-09 в 23 31 36](https://github.com/user-attachments/assets/cef16faa-0455-4268-8df4-3dcc03680fb5)
 
 
 
@@ -92,8 +93,7 @@ terraform init
 2. В файле `~/.kube/config` находятся данные для доступа к кластеру.
 3. Команда `kubectl get pods --all-namespaces` отрабатывает без ошибок.
 
-Развернутые ВМ: 
-![Снимок экрана 2024-11-09 в 23 31 36](https://github.com/user-attachments/assets/cef16faa-0455-4268-8df4-3dcc03680fb5)
+
 
 
 ### Ответ
