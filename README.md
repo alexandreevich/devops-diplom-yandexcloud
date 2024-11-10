@@ -294,7 +294,9 @@ helm install gitlab-runner gitlab/gitlab-runner -n gitlab-runner -f runner/value
 
 ![Снимок экрана 2024-11-10 в 13 43 28](https://github.com/user-attachments/assets/54add257-fab9-496e-839a-10cad38b6eb1)
 
-2. Получаем   ![Снимок экрана 2024-11-10 в 13 34 14](https://github.com/user-attachments/assets/fd011419-92cd-4b98-a2e9-0ebccb0e4b32)
+2. Получаем
+
+![Снимок экрана 2024-11-10 в 13 34 14](https://github.com/user-attachments/assets/fd011419-92cd-4b98-a2e9-0ebccb0e4b32)
 
 3. И изменения по  http:
 
