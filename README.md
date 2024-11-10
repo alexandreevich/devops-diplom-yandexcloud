@@ -58,8 +58,14 @@
 ```
 terraform init
 ```
+![Снимок экрана 2024-11-10 в 14 08 57](https://github.com/user-attachments/assets/7938d628-39d9-43b2-90a7-03f2d0faf4ec)
+
+
 После этого, terraform.tfstate хранится в бакете и можно выполнит `terraform destroy` и `terraform apply` без дополнительных ручных действий.
 Продемонстрирую это скриншотами, что бы не тратить бюджет. После этого переместил файл terraform.tfstate к себе и сделал terraform init -upgrade.
+
+![Снимок экрана 2024-11-10 в 14 09 28](https://github.com/user-attachments/assets/18ea55a0-7e3a-4660-bf86-78e593513927)
+
 
 3. Все переменные описаны в файле [variables.tf](https://github.com/alexandreevich/devops-diplom-yandexcloud/blob/main/terraform/variables.tf)
 4. Нам потребуются 3 ВМ для разворачивания кластера k8s + gitlab. 
@@ -69,6 +75,10 @@ terraform init
 
 Развернутые ВМ: 
 ![Снимок экрана 2024-11-09 в 23 31 36](https://github.com/user-attachments/assets/cef16faa-0455-4268-8df4-3dcc03680fb5)
+
+Отрабатывает команда terraform apply:
+
+![Снимок экрана 2024-11-10 в 14 03 41](https://github.com/user-attachments/assets/3fc64fa1-a912-4621-9d9f-f5f43a53aa9a)
 
 
 
