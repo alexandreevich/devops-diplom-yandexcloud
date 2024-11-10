@@ -258,7 +258,7 @@ helm install gitlab-runner gitlab/gitlab-runner -n gitlab-runner -f runner/value
 По итогу, в namespace gitlab-runner развернут gitlab-runner. Осуществлен проброс volume_mounts, для доступа к Docker. Runner'у создана кластрер роль и осуществлена привязка к ней.
 Раннер может осуществлять деплой в любой namespace(да, ювелирней было бы дать ему права на определенный, признаю)
 
-![Uploading Снимок экрана 2024-11-07 в 15.35.14.png…]()
+![Снимок экрана 2024-11-07 в 15 35 14](https://github.com/user-attachments/assets/1d453cb6-da13-4e4b-8f9c-64c8fe923b48)
 
 
 6. С настройкой runner'a все, идем дальше.
