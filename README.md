@@ -62,9 +62,12 @@ terraform init
 
 
 После этого, terraform.tfstate хранится в бакете и можно выполнит `terraform destroy` и `terraform apply` без дополнительных ручных действий.
-Продемонстрирую это скриншотами, что бы не тратить бюджет. После этого переместил файл terraform.tfstate к себе и сделал terraform init -upgrade.
-
+Продемонстрирую это скриншотами, что бы не тратить бюджет. 
 ![Снимок экрана 2024-11-10 в 14 09 28](https://github.com/user-attachments/assets/18ea55a0-7e3a-4660-bf86-78e593513927)
+
+После этого обратно закомментировал  блок backend "s3" и выполнил terraform init -migrate-state. 
+
+![Снимок экрана 2024-11-10 в 14 48 17](https://github.com/user-attachments/assets/0332c089-dfca-42ea-898a-3ea9caebd785)
 
 
 3. Все переменные описаны в файле [variables.tf](https://github.com/alexandreevich/devops-diplom-yandexcloud/blob/main/terraform/variables.tf)
