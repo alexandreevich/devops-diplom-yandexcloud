@@ -144,7 +144,7 @@ terraform init
 ### Ответ
 
 1. Создан репозиторий [nginx-for-diplom](https://github.com/alexandreevich/nginx-for-diplom)
-2. Imige пушится в [DockerHub](https://hub.docker.com/repository/docker/alexandreevich/nginx-image/general)
+2. Imige пушится в [DockerHub](https://hub.docker.com/repository/docker/alexandreevich/nginx-image/general). Сам [Dockerfile](https://github.com/alexandreevich/nginx-for-diplom/blob/main/Dockerfile)
 3. Первую сборку осуществлял локально:
 
 ![Снимок экрана 2024-11-03 в 15 40 41](https://github.com/user-attachments/assets/c70b511a-4cc7-4247-9dad-b4831f82ab6c)
