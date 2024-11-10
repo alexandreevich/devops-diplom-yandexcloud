@@ -74,7 +74,9 @@ terraform init
 6. Для удобства задаем циклы для формирования инвентарника - [ansible.tf](https://github.com/alexandreevich/devops-diplom-yandexcloud/blob/main/terraform/ansible.tf)
 
 Развернутые ВМ: 
-![Снимок экрана 2024-11-09 в 23 31 36](https://github.com/user-attachments/assets/cef16faa-0455-4268-8df4-3dcc03680fb5)
+
+![Снимок экрана 2024-11-10 в 14 21 12](https://github.com/user-attachments/assets/7c2bce89-5dad-4cee-8607-90be890eb7b7)
+
 
 Отрабатывает команда terraform apply:
 
