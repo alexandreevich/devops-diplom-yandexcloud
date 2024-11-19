@@ -86,6 +86,38 @@ terraform init
 ![Снимок экрана 2024-11-10 в 14 03 41](https://github.com/user-attachments/assets/3fc64fa1-a912-4621-9d9f-f5f43a53aa9a)
 
 
+### UPD после замечания
+Добавил [backend.tf](https://github.com/alexandreevich/devops-diplom-yandexcloud/blob/main/terraform/backend.tf) :
+```
+terraform { 
+  cloud { 
+    
+    organization = "alexadnreevich_company" 
+
+    workspaces { 
+      name = "infra-space" 
+    } 
+  } 
+}
+```
+
+Terraform Cloud работает через VPN, все корректно, ресурсы развернулись: 
+
+<img width="1440" alt="Снимок экрана 2024-11-19 в 19 09 42" src="https://github.com/user-attachments/assets/45d8838d-f688-47e5-96a2-a8786b52d240">
+
+
+Можно даже залочить + тут виден states файлы: 
+
+
+
+<img width="1015" alt="Снимок экрана 2024-11-19 в 19 10 04" src="https://github.com/user-attachments/assets/0d1a5abd-f281-4005-8ed8-0bc6b5351d45">
+
+Видны все запуски:
+
+
+<img width="1310" alt="Снимок экрана 2024-11-19 в 19 10 47" src="https://github.com/user-attachments/assets/5879605f-59a8-4c24-9c37-dffab9ecab98">
+
+
 
 ---
 ### Создание Kubernetes кластера
