@@ -1,33 +1,3 @@
-#2VM / Gitlab + runner 
-# resource "yandex_compute_instance" "gitlub-runner" {
-#   count  = 1
-#   name   = "runner"
-
-#   resources {
-#     core_fraction = 20
-#     cores         = 2
-#     memory        = 2
-#   }
-
-#   boot_disk {
-#     initialize_params {
-#       image_id = var.image_id
-#       size     = 10
-#     }
-#   }
-#   network_interface {
-#     subnet_id = yandex_vpc_subnet.public_subnet[count.index % length(var.public_subnet_zones)].id
-#     nat       = true
-#   }
-  
-#   scheduling_policy {
-#     preemptible = true
-#   }
-#   metadata = {
-#     user-data = "${file("./meta.txt")}"
-#   }
-
-# }
 //gitlub
 resource "yandex_compute_instance" "gitlab-instance" {
   count    = 1
