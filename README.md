@@ -101,7 +101,7 @@ terraform {
 }
 ```
 
-Terraform Cloud работает через VPN, все корректно, ресурсы развернулись: 
+[Terraform Cloud](https://app.terraform.io/app/alexadnreevich_company/workspaces/infra-space/states)  работает через VPN, все корректно, ресурсы развернулись: 
 
 <img width="1440" alt="Снимок экрана 2024-11-19 в 19 09 42" src="https://github.com/user-attachments/assets/45d8838d-f688-47e5-96a2-a8786b52d240">
 
